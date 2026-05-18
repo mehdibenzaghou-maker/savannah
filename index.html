@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#0A0A0A">
+<title>Savannah Pizzeria &mdash; Best Pizza in Algeria</title>
+<meta name="description" content="Savannah Pizzeria — La meilleure pizza d'Algérie. 16 restaurants à travers tout le pays.">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Dancing+Script:wght@400;600;700&family=Montserrat:wght@300;400;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════════
+     INTRO OVERLAY — Logo Animation
+═══════════════════════════════════════════════════ -->
+<div id="intro-overlay">
+  <canvas id="intro-canvas"></canvas>
+  <div class="intro-logo-wrap">
+    <svg viewBox="0 0 380 310" xmlns="http://www.w3.org/2000/svg" width="320" style="filter:drop-shadow(0 0 30px rgba(227,30,36,.6))">
+      <defs>
+        <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+          <stop offset="0%" stop-color="#FF6666" stop-opacity="0.3"/>
+          <stop offset="100%" stop-color="#E31E24" stop-opacity="0"/>
+        </radialGradient>
+      </defs>
+      <!-- Glow bg -->
+      <ellipse cx="190" cy="155" rx="155" ry="155" fill="url(#glow)"/>
+      <!-- Outer circle -->
+      <circle cx="190" cy="155" r="142" fill="none" stroke="#E31E24" stroke-width="4"/>
+      <!-- Inner deco ring partial -->
+      <path d="M 65 155 A 127 127 0 0 1 315 155" fill="none" stroke="#E31E24" stroke-width="4" opacity="0.9"/>
+      <path d="M 65 155 A 127 127 0 0 0 315 155" fill="none" stroke="#E31E24" stroke-width="4" opacity="0.25"/>
+      <!-- BEST arc top -->
+      <path id="tArc" d="M 76 130 A 122 122 0 0 1 304 130" fill="none"/>
+      <text font-family="Dancing Script, cursive" font-size="32" font-style="italic" fill="#E31E24" font-weight="700">
+        <textPath href="#tArc" startOffset="24%">Best</textPath>
+      </text>
+      <!-- PIZZA arc bottom -->
+      <path id="bArc" d="M 85 182 A 118 118 0 0 0 295 182" fill="none"/>
+      <text font-family="Dancing Script, cursive" font-size="32" font-style="italic" fill="#E31E24" font-weight="700">
+        <textPath href="#bArc" startOffset="21%">Pizza</textPath>
+      </text>
+      <!-- SAVANNAH main -->
+      <text x="190" y="168" text-anchor="middle"
+        font-family="Great Vibes, cursive"
+        font-size="82" fill="white" font-weight="400"
+        style="filter:drop-shadow(0 2px 8px rgba(0,0,0,.5))">Savannah</text>
+      <!-- Swoosh -->
+      <path d="M 42 182 Q 190 195 338 178" fill="none" stroke="white" stroke-width="3.5" stroke-linecap="round" opacity="0.95"/>
+    </svg>
+  </div>
+  <button class="intro-skip">Passer &rarr;</button>
+</div>
+
+<!-- ═══════════════════════════════════════════════════
+     NAV
+═══════════════════════════════════════════════════ -->
+<nav>
+  <a href="index.html" class="nav-logo">
+    <svg viewBox="0 0 200 165" xmlns="http://www.w3.org/2000/svg" style="height:50px;width:auto">
+      <circle cx="100" cy="82" r="75" fill="none" stroke="#E31E24" stroke-width="2.5"/>
+      <path id="tn" d="M 37 70 A 66 66 0 0 1 163 70" fill="none"/>
+      <text font-family="Dancing Script,cursive" font-size="17" font-style="italic" fill="#E31E24" font-weight="700"><textPath href="#tn" startOffset="25%">Best</textPath></text>
+      <path id="bn" d="M 44 95 A 64 64 0 0 0 156 95" fill="none"/>
+      <text font-family="Dancing Script,cursive" font-size="17" font-style="italic" fill="#E31E24" font-weight="700"><textPath href="#bn" startOffset="22%">Pizza</textPath></text>
+      <text x="100" y="90" text-anchor="middle" font-family="Great Vibes,cursive" font-size="42" fill="white">Savannah</text>
+      <path d="M 22 97 Q 100 105 178 94" fill="none" stroke="white" stroke-width="2" stroke-linecap="round"/>
+    </svg>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html" class="active">Accueil</a></li>
+    <li class="nav-dd">
+      <a href="#">Restaurants <span class="caret">&#9662;</span></a>
+      <ul class="dd-menu">
+        <li><a href="didouche.html">Didouche Mourad</a></li>
+        <li><a href="draria.html">Draria</a></li>
+        <li><a href="kouba.html">Kouba</a></li>
+        <li><a href="mostaganem.html">Mostaganem</a></li>
+        <li><a href="birkhadem.html">Birkhadem</a></li>
+        <li><a href="oran-akid.html">Oran &mdash; Akid Lotfi</a></li>
+        <li><a href="blida.html">Blida</a></li>
+        <li><a href="constantine.html">Constantine</a></li>
+        <li><a href="cheraga.html">Ch&eacute;raga</a></li>
+        <li><a href="chlef.html">Chlef</a></li>
+        <li><a href="oran-trait.html">Oran &mdash; Trait d&rsquo;Union</a></li>
+        <li><a href="aindefla.html">A&iuml;n Defla</a></li>
+        <li><a href="djelfa.html">Djelfa</a></li>
+        <li><a href="staouali.html">Sta&ouml;uali</a></li>
+        <li><a href="khemis.html">Khemis Miliana</a></li>
+        <li><a href="khemis-express.html">Khemis Express</a></li>
+      </ul>
+    </li>
+    <li><a href="menu.html">Menu</a></li>
+  </ul>
+  <div class="hamburger" id="burger"><span></span><span></span><span></span></div>
+</nav>
+
+<div class="mob-nav" id="mobNav">
+  <a href="index.html">Accueil</a>
+  <div class="mob-sec-label">&mdash; Nos Restaurants &mdash;</div>
+  <a href="didouche.html">Didouche Mourad</a>
+  <a href="draria.html">Draria</a>
+  <a href="kouba.html">Kouba</a>
+  <a href="mostaganem.html">Mostaganem</a>
+  <a href="birkhadem.html">Birkhadem</a>
+  <a href="oran-akid.html">Oran &mdash; Akid Lotfi</a>
+  <a href="blida.html">Blida</a>
+  <a href="constantine.html">Constantine</a>
+  <a href="cheraga.html">Ch&eacute;raga</a>
+  <a href="chlef.html">Chlef</a>
+  <a href="oran-trait.html">Oran &mdash; Trait d&rsquo;Union</a>
+  <a href="aindefla.html">A&iuml;n Defla</a>
+  <a href="djelfa.html">Djelfa</a>
+  <a href="staouali.html">Sta&ouml;uali</a>
+  <a href="khemis.html">Khemis Miliana</a>
+  <a href="khemis-express.html">Khemis Express</a>
+  <a href="menu.html">Menu</a>
+</div>
+
+<!-- ═══════════════════════════════════════════════════
+     HERO
+═══════════════════════════════════════════════════ -->
+<section class="home-hero">
+  <div class="home-hero-bg"></div>
+  <canvas id="particles"></canvas>
+
+  <div class="home-hero-logo">
+    <svg viewBox="0 0 380 310" xmlns="http://www.w3.org/2000/svg" width="min(300px,72vw)" style="filter:drop-shadow(0 0 22px rgba(227,30,36,.4));margin:0 auto;display:block">
+      <circle cx="190" cy="155" r="142" fill="none" stroke="#E31E24" stroke-width="3.5"/>
+      <path id="tH" d="M 76 130 A 122 122 0 0 1 304 130" fill="none"/>
+      <text font-family="Dancing Script,cursive" font-size="30" font-style="italic" fill="#E31E24" font-weight="700"><textPath href="#tH" startOffset="25%">Best</textPath></text>
+      <path id="bH" d="M 85 182 A 118 118 0 0 0 295 182" fill="none"/>
+      <text font-family="Dancing Script,cursive" font-size="30" font-style="italic" fill="#E31E24" font-weight="700"><textPath href="#bH" startOffset="22%">Pizza</textPath></text>
+      <text x="190" y="168" text-anchor="middle" font-family="Great Vibes,cursive" font-size="78" fill="white">Savannah</text>
+      <path d="M 42 182 Q 190 195 338 178" fill="none" stroke="white" stroke-width="3" stroke-linecap="round"/>
+    </svg>
+  </div>
+
+  <p class="home-tagline">Best Pizza in Algeria</p>
+  <p class="home-sub">16 restaurants &mdash; Partout en Alg&eacute;rie</p>
+  <div class="hero-orn"><div class="hero-dot"></div></div>
+
+  <div class="scroll-hint">
+    <p>D&eacute;couvrir</p>
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<div class="red-line"></div>
+
+<!-- ═══════════════════════════════════════════════════
+     STORY BAND
+═══════════════════════════════════════════════════ -->
+<section style="background:var(--dark2);padding:5rem 7%;position:relative;overflow:hidden">
+  <div style="position:absolute;inset:0;background:radial-gradient(ellipse 60% 80% at 50% 50%,rgba(227,30,36,.05) 0%,transparent 100%);pointer-events:none"></div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center;max-width:1100px;margin:0 auto">
+    <div class="reveal">
+      <p style="font-family:var(--fmain);font-size:.62rem;letter-spacing:.38em;text-transform:uppercase;font-weight:700;color:var(--red);margin-bottom:1rem">Notre Histoire</p>
+      <h2 style="font-family:var(--fdeco);font-size:clamp(1.8rem,4vw,3rem);color:var(--white);line-height:1.1;margin-bottom:1.4rem">De Khemis Miliana<br>au reste de l&rsquo;Alg&eacute;rie</h2>
+      <p style="font-family:var(--fserif);font-size:1.05rem;color:var(--lgray);line-height:2;direction:rtl;text-align:right">من خميس مليانة بدات الحكاية... في 18 مارس 2018، كانت البداية. أول فرع، أول بيتزا، أول ابتسامة... هكذا ولد اسم سافانا. اليوم، 16 فرع يغطي كل أرجاء الجزائر، من العاصمة إلى وهران، من قسنطينة إلى مستغانم. سافانا اليوم ليست مجرد بيتزا — إنها قصة جزائرية تكتب مدينة بعد مدينة.</p>
+      <a href="khemis.html" style="display:inline-flex;align-items:center;gap:8px;margin-top:1.5rem;font-family:var(--fmain);font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;font-weight:700;color:var(--red);border-bottom:1px solid rgba(227,30,36,.3);padding-bottom:4px;transition:all .3s">
+        Voir le 1er Restaurant &rarr;
+      </a>
+    </div>
+    <div class="reveal" style="display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(227,30,36,.12)">
+      <div style="background:var(--dark3);padding:2rem;text-align:center">
+        <div style="font-family:var(--fdeco);font-size:2.8rem;color:var(--red2)"><span data-count="16">0</span></div>
+        <div style="font-family:var(--fmain);font-size:.58rem;letter-spacing:.28em;text-transform:uppercase;font-weight:700;color:rgba(255,255,255,.4);margin-top:.3rem">Restaurants</div>
+      </div>
+      <div style="background:var(--dark3);padding:2rem;text-align:center">
+        <div style="font-family:var(--fdeco);font-size:2.8rem;color:var(--red2)"><span data-count="2018">0</span></div>
+        <div style="font-family:var(--fmain);font-size:.58rem;letter-spacing:.28em;text-transform:uppercase;font-weight:700;color:rgba(255,255,255,.4);margin-top:.3rem">Fond&eacute;e en</div>
+      </div>
+      <div style="background:var(--dark3);padding:2rem;text-align:center">
+        <div style="font-family:var(--fdeco);font-size:2.8rem;color:var(--red2)"><span data-count="11">0</span></div>
+        <div style="font-family:var(--fmain);font-size:.58rem;letter-spacing:.28em;text-transform:uppercase;font-weight:700;color:rgba(255,255,255,.4);margin-top:.3rem">Wilayas</div>
+      </div>
+      <div style="background:var(--dark3);padding:2rem;text-align:center">
+        <div style="font-family:var(--fdeco);font-size:2.8rem;color:var(--red2)"><span data-count="7">0</span>/7</div>
+        <div style="font-family:var(--fmain);font-size:.58rem;letter-spacing:.28em;text-transform:uppercase;font-weight:700;color:rgba(255,255,255,.4);margin-top:.3rem">Jours</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════
+     RESTAURANTS GRID
+═══════════════════════════════════════════════════ -->
+<section class="restaurants-section">
+  <div class="sec-header">
+    <p class="sec-eyebrow">Nos &Eacute;tablissements</p>
+    <h2 class="sec-title">Trouvez votre Savannah</h2>
+    <div class="sec-line"></div>
+  </div>
+
+  <div class="resto-grid">
+
+    <!-- 1 — Khemis Miliana (le premier) -->
+    <a href="khemis.html" class="resto-card reveal">
+      <div class="rc-media">
+        <img src="https://pub-935f0b68533740d186c56d006b31520e.r2.dev/khemis%20miliana%201.jpg" alt="Khemis Miliana" loading="lazy">
+        <div class="rc-badge">#01 &mdash; Le Premier</div>
+      </div>
+      <div class="rc-body">
+        <div class="rc-city">Khemis Miliana &mdash; Ain Defla</div>
+        <div class="rc-name">Khemis Miliana</div>
+        <div class="rc-phone"><i class="fas fa-phone" style="color:var(--red3);margin-right:5px;font-size:.7rem"></i> 0550 50 54 10</div>
+        <div class="rc-addr">Khemis Miliana &mdash; Berceau de Savannah</div>
+        <div class="rc-cta">Voir le restaurant <i class="fas fa-arrow-right"></i></div>
+      </div>
+    </a>
+
+    <!-- 2 — Khemis Express -->
+    <a href="khemis-express.html" class="resto-card reveal">
+      <div class="rc-media">
+        <div class="rc-media-placeholder">
+          <svg viewBox="0 0 60 60" fill="none"><circle cx="30" cy="30" r="28" stroke="#E31E24" stroke-width="1.5" opacity=".3"/><text x="30" y="36" text-anchor="middle" font-family="Great Vibes,cursive" font-size="22" fill="#E31E24" opacity=".3">S</text></svg>
+        </div>
+        <div class="rc-badge">#02 &mdash; Express</div>
+      </div>
+      <div class="rc-body">
+        <div class="rc-city">Khemis Miliana &mdash; Ain Defla</div>
+        <div class="rc-name">Khemis Express</div>
+        <div class="rc-phone"><i class="fas fa-phone" style="color:var(--red3);margin-right:5px;font-size:.7rem"></i> 0550 50 54 10</div>
+        <div class="rc-addr">Service rapide &amp; livraison</div>
+        <div class="rc-cta">Voir le restaurant <i class="fas fa-arrow-right"></i></div>
+      </div>
+    </a>
+
+    <!-- 3 — Staouali -->
+    <a href="staouali.html" class="resto-card reveal">
+      <div class="rc-media">
+        <img src="https://pub-935f0b68533740d186c56d006b31520e.r2.dev/staouali.jpg" alt="Staouali" loading="lazy">
+        <div class="rc-badge">#03</div>
+      </div>
+      <div class="rc-body">
+        <div class="rc-city">Alger &mdash; Sta&ouml;uali</div>
+        <div class="rc-name">Sta&ouml;uali</div>
+        <div class="rc-phone"><i class="fas fa-phone" style="color:var(--red3);margin-right:5px;font-size:.7rem"></i> 0550 01 01 88</div>
+        <div class="rc-addr">QV4P+5H Staoueli</div>
+        <div class="rc-cta">Voir le restaurant <i class="fas fa-arrow-right"></i></div>
+      </div>
+    </a>
+
+    <!-- 4 — Djelfa -->
+    <a href="djelfa.html" class="resto-card reveal">
+      <div class="rc-media">
+        <img src="https://pub-935f0b68533740d186c56d006b31520e.r2.dev/djelfa.jpg" alt="Djelfa" loading="lazy">
+        <div class="rc-badge">#04</div>
+      </div>
+      <div class="rc-body">
+        <div class="rc-city">Djelfa</div>
+        <div class="rc-name">Djelfa</div>
+        <div class="rc-phone"><i class="fas fa-phone" style="color:var(--red3);margin-right:5px;font-size:.7rem"></i> 0671 71 71 73</div>
+        <div class="rc-addr">M76C+72P, Djelfa</div>
+        <div class="rc-cta">Voir le restaurant <i class="fas fa-arrow-right"></i></div>
+      </div>
+    </a>
+
+    <!-- 5 — Ain Defla -->
+    <a href="aindefla.html" class="resto-card reveal">
+      <div class="rc-media">
+        <div class="rc-media-placeholder">
+          <svg viewBox="0 0 60 60" fill="none"><circle cx="30" cy="30" r="28" stroke="#E31E24" stroke-width="1.5" opacity=".3"/><text x="30" y="36" text-anchor="middle" font-family="Great Vibes,cursive" font-size="22" fill="#E31E24" opacity=".3">S</text></svg>
+        </div>
+        <div class="rc-badge">#05</div>
+      </div>
+      <div class="rc-body">
+        <div class="rc-city">A&iuml;n Defla</div>
+        <div class="rc-name">A&iuml;n Defla</div>
+        <div class="rc-phone"><i class="fas fa-phone" style="color:var(--red3);margin-right:5px;font-size:.7rem"></i> 0552 49 00 00</div>
+        <div class="rc-addr">Rue des fr&egrave;res alili</div>
+        <div class="rc-cta">Voir le restaurant <i class="fas fa-arrow-right"></i></div>
+      </div>
+    </a>
+
+    <!-- 6 — Oran Trait d'Union -->
+    <a href="oran-trait.html" class="resto-card reveal">
+      <div class="rc-media">
+        <img src="https://pub-935f0b68533740d186c56d006b31520e.r2.dev/oran%20t.jpg" alt="Oran Trait d'Union" loading="lazy">
+        <div class="rc-badge">#06 &mdash; Oran</div>
+      </div>
+      <div class="rc-body">
+        <div class="rc-city">Oran</div>
+        <div class="rc-name">Oran Trait d&rsquo;Union</div>
+        <div class="rc-phone"><i class="fas fa-phone" style="color:var(--red3);margin-right:5px;font-size:.7rem"></i> 0541 66 00 00</div>
+        <div class="rc-addr">P95Q+5W, Oran</div>
+        <div class="rc-cta">Voir le restaurant <i class="fas fa-arrow-right"></i></div>
+      </div>
+    </a>
+
+    <!-- 7 — Chlef -->
+    <a href="chlef.html" class="resto-card reveal">
+      <div class="rc-media">
+        <img src="https://pub-935f0b68533740d186c56d006b31520e.r2.dev/chlef.jpg" alt="Chlef" loading="lazy">
+        <div class="rc-badge">#07</div>
+      </div>
+      <div class="rc-body">
+        <div class="rc-city">Chlef</div>
+        <div class="rc-name">Chlef</div>
+        <div class="rc-phone"><i class="fas fa-phone" style="color:var(--red3);margin-right:5px;font-size:.7rem"></i> 0772 42 57 68</div>
+        <div class="rc-addr">586H+FW Chlef</div>
+        <div class="rc-cta">Voir le restaurant <i class="fas fa-arrow-right"></i></div>
+      </div>
+    </a>
+
+    <!-- 8 — Cheraga -->
+    <a href="cheraga.html" class="resto-card reveal">
+      <div class="rc-media">
+        <img src="https://pub-935f0b68533740d186c56d006b31520e.r2.dev/cheraga.jpg" alt="Cheraga" loading="lazy">
+        <div class="rc-badge">#08</div>
+      </div>
+      <div class="rc-body">
+        <div class="rc-city">Alger &mdash; Ch&eacute;raga</div>
+        <div class="rc-name">Ch&eacute;raga</div>
+        <div class="rc-phone"><i class="fas fa-phone" style="color:var(--red3);margin-right:5px;font-size:.7rem"></i> 0553 177 177</div>
+        <div class="rc-addr">QX43+XR6, Ch&eacute;raga</div>
+        <div class="rc-cta">Voir le restaurant <i class="fas fa-arrow-right"></i></div>
+      </div>
+    </a>
+
+    <!-- 9 — Constantine -->
+    <a href="constantine.html" class="resto-card reveal">
+      <div class="rc-media">
+        <img src="https://pub-935f0b68533740d186c56d006b31520e.r2.dev/const.jpg" alt="Constantine" loading="lazy">
+        <div class="rc-badge">#09 &mdash; Est</div>
+      </div>
+      <div class="rc-body">
+        <div class="rc-city">Constantine</div>
+        <div class="rc-name">Constantine</div>
+        <div class="rc-phone"><i class="fas fa-phone" style="color:var(--red3);margin-right:5px;font-size:.7rem"></i> 0553 195 195</div>
+        <div class="rc-addr">7H4M+H4W, El Khroub</div>
+        <div class="rc-cta">Voir le restaurant <i class="fas fa-arrow-right"></i></div>
+      </div>
+    </a>
+
+    <!-- 10 — Blida -->
+    <a href="blida.html" class="resto-card reveal">
+      <div class="rc-media">
+        <div class="rc-media-placeholder">
+          <svg viewBox="0 0 60 60" fill="none"><circle cx="30" cy="30" r="28" stroke="#E31E24" stroke-width="1.5" opacity=".3"/><text x="30" y="36" text-anchor="middle" font-family="Great Vibes,cursive" font-size="22" fill="#E31E24" opacity=".3">S</text></svg>
+        </div>
+        <div class="rc-badge">#10 &mdash; Blida</div>
+      </div>
+      <div class="rc-body">
+        <div class="rc-city">Blida</div>
+        <div class="rc-name">Blida</div>
+        <div class="rc-phone"><i class="fas fa-phone" style="color:var(--red3);margin-right:5px;font-size:.7rem"></i> 0553 121 121</div>
+        <div class="rc-addr">FRMH+GGP, Blida</div>
+        <div class="rc-cta">Voir le restaurant <i class="fas fa-arrow-right"></i></div>
+      </div>
+    </a>
+
+    <!-- 11 — Oran Akid Lotfi -->
+    <a href="oran-akid.html" class="resto-card reveal">
+      <div class="rc-media">
+        <img src="https://pub-935f0b68533740d186c56d006b31520e.r2.dev/akid.jpg" alt="Oran Akid Lotfi" loading="lazy">
+        <div class="rc-badge">#11 &mdash; Oran</div>
+      </div>
+      <div class="rc-body">
+        <div class="rc-city">Oran &mdash; Akid Lotfi</div>
+        <div class="rc-name">Oran Akid Lotfi</div>
+        <div class="rc-phone"><i class="fas fa-phone" style="color:var(--red3);margin-right:5px;font-size:.7rem"></i> 0553 122 122</div>
+        <div class="rc-addr">PCH7+26V, Oran</div>
+        <div class="rc-cta">Voir le restaurant <i class="fas fa-arrow-right"></i></div>
+      </div>
+    </a>
+
+    <!-- 12 — Mostaganem -->
+    <a href="mostaganem.html" class="resto-card reveal">
+      <div class="rc-media">
+        <img src="https://pub-935f0b68533740d186c56d006b31520e.r2.dev/mosta.jpg" alt="Mostaganem" loading="lazy">
+        <div class="rc-badge">#12 &mdash; Corniche</div>
+      </div>
+      <div class="rc-body">
+        <div class="rc-city">Mostaganem</div>
+        <div class="rc-name">Mostaganem</div>
+        <div class="rc-phone"><i class="fas fa-phone" style="color:var(--red3);margin-right:5px;font-size:.7rem"></i> 0550 21 21 42</div>
+        <div class="rc-addr">W385+V22, Mostaganem</div>
+        <div class="rc-cta">Voir le restaurant <i class="fas fa-arrow-right"></i></div>
+      </div>
+    </a>
+
+    <!-- 13 — Birkhadem -->
+    <a href="birkhadem.html" class="resto-card reveal">
+      <div class="rc-media">
+        <img src="https://pub-935f0b68533740d186c56d006b31520e.r2.dev/birkhadem.jpg" alt="Birkhadem" loading="lazy">
+        <div class="rc-badge">#13 &mdash; Alger</div>
+      </div>
+      <div class="rc-body">
+        <div class="rc-city">Alger &mdash; Birkhadem</div>
+        <div class="rc-name">Birkhadem</div>
+        <div class="rc-phone"><i class="fas fa-phone" style="color:var(--red3);margin-right:5px;font-size:.7rem"></i> 0670 74 07 45</div>
+        <div class="rc-addr">P392+G59, Birkhadem</div>
+        <div class="rc-cta">Voir le restaurant <i class="fas fa-arrow-right"></i></div>
+      </div>
+    </a>
+
+    <!-- 14 — Kouba -->
+    <a href="kouba.html" class="resto-card reveal">
+      <div class="rc-media">
+        <img src="https://pub-935f0b68533740d186c56d006b31520e.r2.dev/kouba.jpg" alt="Kouba" loading="lazy">
+        <div class="rc-badge">#14 &mdash; Alger</div>
+      </div>
+      <div class="rc-body">
+        <div class="rc-city">Alger &mdash; Kouba</div>
+        <div class="rc-name">Kouba</div>
+        <div class="rc-phone"><i class="fas fa-phone" style="color:var(--red3);margin-right:5px;font-size:.7rem"></i> 0555 12 12 33</div>
+        <div class="rc-addr">P3HG+MJF, Kouba</div>
+        <div class="rc-cta">Voir le restaurant <i class="fas fa-arrow-right"></i></div>
+      </div>
+    </a>
+
+    <!-- 15 — Draria -->
+    <a href="draria.html" class="resto-card reveal">
+      <div class="rc-media">
+        <img src="https://pub-935f0b68533740d186c56d006b31520e.r2.dev/draria%202.jpg" alt="Draria" loading="lazy">
+        <div class="rc-badge">#15 &mdash; Alger</div>
+      </div>
+      <div class="rc-body">
+        <div class="rc-city">Alger &mdash; Draria</div>
+        <div class="rc-name">Draria</div>
+        <div class="rc-phone"><i class="fas fa-phone" style="color:var(--red3);margin-right:5px;font-size:.7rem"></i> 0560 337 733</div>
+        <div class="rc-addr">PXFR+2JP, Draria</div>
+        <div class="rc-cta">Voir le restaurant <i class="fas fa-arrow-right"></i></div>
+      </div>
+    </a>
+
+    <!-- 16 — Didouche Mourad -->
+    <a href="didouche.html" class="resto-card reveal">
+      <div class="rc-media">
+        <video src="https://pub-935f0b68533740d186c56d006b31520e.r2.dev/didouche%201.mov" autoplay muted loop playsinline></video>
+        <div class="rc-badge">#16 &mdash; Centre</div>
+      </div>
+      <div class="rc-body">
+        <div class="rc-city">Alger Centre</div>
+        <div class="rc-name">Didouche Mourad</div>
+        <div class="rc-phone"><i class="fas fa-phone" style="color:var(--red3);margin-right:5px;font-size:.7rem"></i> 0563 155 129</div>
+        <div class="rc-addr">72 rue Didouche Mourad, Alger</div>
+        <div class="rc-cta">Voir le restaurant <i class="fas fa-arrow-right"></i></div>
+      </div>
+    </a>
+
+  </div>
+</section>
+
+<div class="red-line"></div>
+
+<!-- ═══════════════════════════════════════════════════
+     MENU CTA
+═══════════════════════════════════════════════════ -->
+<section style="background:var(--dark2);padding:5rem 7%;text-align:center;position:relative;overflow:hidden">
+  <div style="position:absolute;inset:0;background:radial-gradient(ellipse 70% 70% at 50% 50%,rgba(227,30,36,.07) 0%,transparent 100%);pointer-events:none"></div>
+  <p class="sec-eyebrow reveal">Notre Carte</p>
+  <h2 class="sec-title reveal" style="max-width:600px;margin:0 auto 2rem">La Meilleure Pizza &mdash; Maintenant en 3D</h2>
+  <p class="reveal" style="font-family:var(--fmain);font-size:.88rem;color:var(--gray);max-width:500px;margin:0 auto 2.5rem;line-height:1.8">Visualisez chaque pizza, burger et tacos en 3D avant de commander. Appuyez sur &laquo;&nbsp;Voir mon plat&nbsp;&raquo; et d&eacute;couvrez votre repas avant m&ecirc;me qu&rsquo;il soit pr&eacute;par&eacute;.</p>
+  <div class="reveal" style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap">
+    <a href="pizza-tomate.html" class="btn-primary"><i class="fas fa-pizza-slice"></i> Pizza Tomate</a>
+    <a href="pizza-blanche.html" class="btn-outline"><i class="fas fa-cheese"></i> Pizza Blanche</a>
+    <a href="burger.html" class="btn-outline"><i class="fas fa-burger"></i> Burgers</a>
+    <a href="tacos.html" class="btn-outline"><i class="fas fa-bread-slice"></i> Tacos</a>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════
+     SOCIALS
+═══════════════════════════════════════════════════ -->
+<section style="background:var(--dark);padding:4rem 7%;text-align:center">
+  <p class="sec-eyebrow reveal">R&eacute;seaux Sociaux</p>
+  <h2 class="sec-title reveal" style="font-size:clamp(1.4rem,3vw,2rem);margin-bottom:2.5rem">Suivez l&rsquo;aventure Savannah</h2>
+  <div class="socials-grid reveal" style="justify-content:center">
+    <a href="https://www.instagram.com/savannahpizzeria/" target="_blank" class="soc-btn"><i class="fab fa-instagram"></i> Instagram</a>
+    <a href="https://www.tiktok.com/@savannahpizzeria" target="_blank" class="soc-btn"><i class="fab fa-tiktok"></i> TikTok</a>
+    <a href="https://facebook.com/SAVANNAHPIZZERIA" target="_blank" class="soc-btn"><i class="fab fa-facebook-f"></i> Facebook</a>
+    <a href="https://x.com/savannahpizza" target="_blank" class="soc-btn"><i class="fab fa-x-twitter"></i> X / Twitter</a>
+    <a href="https://www.snapchat.com/@savannahpizzeri" target="_blank" class="soc-btn"><i class="fab fa-snapchat"></i> Snapchat</a>
+    <a href="mailto:savannahpizzeria@gmail.com" class="soc-btn"><i class="fas fa-envelope"></i> Email</a>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════
+     FOOTER
+═══════════════════════════════════════════════════ -->
+<footer>
+  <div class="ft-grid">
+    <div>
+      <div class="ft-logo">
+        <svg viewBox="0 0 200 165" xmlns="http://www.w3.org/2000/svg" style="height:55px;width:auto">
+          <circle cx="100" cy="82" r="75" fill="none" stroke="#E31E24" stroke-width="2.5"/>
+          <path id="tf" d="M 37 70 A 66 66 0 0 1 163 70" fill="none"/>
+          <text font-family="Dancing Script,cursive" font-size="17" font-style="italic" fill="#E31E24" font-weight="700"><textPath href="#tf" startOffset="25%">Best</textPath></text>
+          <path id="bf" d="M 44 95 A 64 64 0 0 0 156 95" fill="none"/>
+          <text font-family="Dancing Script,cursive" font-size="17" font-style="italic" fill="#E31E24" font-weight="700"><textPath href="#bf" startOffset="22%">Pizza</textPath></text>
+          <text x="100" y="90" text-anchor="middle" font-family="Great Vibes,cursive" font-size="42" fill="white">Savannah</text>
+          <path d="M 22 97 Q 100 105 178 94" fill="none" stroke="white" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <div class="ft-tagline">Best Pizza in Algeria</div>
+      <p class="ft-sub">16 restaurants &agrave; travers l&rsquo;Alg&eacute;rie depuis 2018</p>
+      <div class="ft-soc">
+        <a href="https://www.instagram.com/savannahpizzeria/" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.tiktok.com/@savannahpizzeria" target="_blank"><i class="fab fa-tiktok"></i></a>
+        <a href="https://facebook.com/SAVANNAHPIZZERIA" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://x.com/savannahpizza" target="_blank"><i class="fab fa-x-twitter"></i></a>
+        <a href="https://www.snapchat.com/@savannahpizzeri" target="_blank"><i class="fab fa-snapchat"></i></a>
+        <a href="mailto:savannahpizzeria@gmail.com"><i class="fas fa-envelope"></i></a>
+      </div>
+    </div>
+    <div>
+      <div class="ft-hd">Restaurants</div>
+      <ul class="ft-links">
+        <li><a href="khemis.html">Khemis Miliana</a></li>
+        <li><a href="didouche.html">Didouche Mourad</a></li>
+        <li><a href="draria.html">Draria</a></li>
+        <li><a href="kouba.html">Kouba</a></li>
+        <li><a href="mostaganem.html">Mostaganem</a></li>
+        <li><a href="constantine.html">Constantine</a></li>
+        <li><a href="oran-akid.html">Oran &mdash; Akid Lotfi</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="ft-hd">Menu</div>
+      <ul class="ft-links">
+        <li><a href="menu.html">Voir la Carte</a></li>
+        <li><a href="pizza-tomate.html">Pizza Sauce Tomate</a></li>
+        <li><a href="pizza-blanche.html">Pizza Sauce Blanche</a></li>
+        <li><a href="burger.html">Burgers</a></li>
+        <li><a href="tacos.html">Tacos</a></li>
+        <li><a href="panozzo.html">Panozzo</a></li>
+      </ul>
+      <div class="ft-hd" style="margin-top:1.5rem">Contact</div>
+      <p class="ft-contact">savannahpizzeria@gmail.com</p>
+    </div>
+  </div>
+  <div class="ft-bottom">
+    <p class="ft-copy">&copy; 2025 <span>Savannah Pizzeria</span> &mdash; Best Pizza in Algeria</p>
+    <p class="ft-copy">R&eacute;alis&eacute; avec <span>&hearts;</span></p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#0A0A0A">
+<title>Pizza Sauce Tomate &mdash; Savannah Pizzeria</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Dancing+Script:wght@400;600;700&family=Montserrat:wght@300;400;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.js"></script>
+</head><body><nav>
+  <a href="index.html" class="nav-logo"><svg viewBox="0 0 200 165" xmlns="http://www.w3.org/2000/svg" class="savannah-logo sm">
+  <circle cx="100" cy="82" r="75" fill="none" stroke="#E31E24" stroke-width="2.5"/>
+  <path id="ta2" d="M 37 70 A 66 66 0 0 1 163 70" fill="none"/>
+  <text font-family="Dancing Script,cursive" font-size="17" font-style="italic" fill="#E31E24" font-weight="700"><textPath href="#ta2" startOffset="25%">Best</textPath></text>
+  <path id="ba2" d="M 44 95 A 64 64 0 0 0 156 95" fill="none"/>
+  <text font-family="Dancing Script,cursive" font-size="17" font-style="italic" fill="#E31E24" font-weight="700"><textPath href="#ba2" startOffset="22%">Pizza</textPath></text>
+  <text x="100" y="90" text-anchor="middle" font-family="Great Vibes,cursive" font-size="42" fill="white">Savannah</text>
+  <path d="M 22 97 Q 100 105 178 94" fill="none" stroke="white" stroke-width="2" stroke-linecap="round"/>
+</svg></a>
+  <ul class="nav-links">
+    <li><a href="index.html">Accueil</a></li>
+    <li class="nav-dd"><a href="#">Restaurants <span class="caret">&#9662;</span></a>
+      <ul class="dd-menu">
+        <li><a href="didouche.html">Didouche Mourad</a></li>
+        <li><a href="draria.html">Draria</a></li>
+        <li><a href="kouba.html">Kouba</a></li>
+        <li><a href="mostaganem.html">Mostaganem</a></li>
+        <li><a href="birkhadem.html">Birkhadem</a></li>
+        <li><a href="oran-akid.html">Oran &mdash; Akid Lotfi</a></li>
+        <li><a href="blida.html">Blida</a></li>
+        <li><a href="constantine.html">Constantine</a></li>
+        <li><a href="cheraga.html">Ch&eacute;raga</a></li>
+        <li><a href="chlef.html">Chlef</a></li>
+        <li><a href="oran-trait.html">Oran &mdash; Trait d&rsquo;Union</a></li>
+        <li><a href="aindefla.html">A&iuml;n Defla</a></li>
+        <li><a href="djelfa.html">Djelfa</a></li>
+        <li><a href="staouali.html">Sta&ouml;uali</a></li>
+        <li><a href="khemis.html">Khemis Miliana</a></li>
+        <li><a href="khemis-express.html">Khemis Express</a></li>
+      </ul>
+    </li>
+    <li><a href="menu.html">Menu</a></li>
+  </ul>
+  <div class="hamburger" id="burger"><span></span><span></span><span></span></div>
+</nav>
+<div class="mob-nav" id="mobNav">
+  <a href="index.html">Accueil</a>
+  <div class="mob-sec-label">— Restaurants —</div>
+  <a href="didouche.html">Didouche Mourad</a><a href="draria.html">Draria</a>
+  <a href="kouba.html">Kouba</a><a href="mostaganem.html">Mostaganem</a>
+  <a href="birkhadem.html">Birkhadem</a><a href="oran-akid.html">Oran &mdash; Akid Lotfi</a>
+  <a href="blida.html">Blida</a><a href="constantine.html">Constantine</a>
+  <a href="cheraga.html">Ch&eacute;raga</a><a href="chlef.html">Chlef</a>
+  <a href="oran-trait.html">Oran &mdash; Trait d&rsquo;Union</a><a href="aindefla.html">A&iuml;n Defla</a>
+  <a href="djelfa.html">Djelfa</a><a href="staouali.html">Sta&ouml;uali</a>
+  <a href="khemis.html">Khemis Miliana</a><a href="khemis-express.html">Khemis Express</a>
+  <a href="menu.html">Menu</a>
+</div>
+<div class="menu-hero">
+  <p class="mh-label">Pizza</p>
+  <h1 class="mh-title">Sauce Tomate</h1>
+  <div class="mh-orn"><div class="mh-gem"></div></div>
+  <a href="menu.html" class="back-link">&#8592; Retour au Menu</a>
+</div><div class="price-bar">
+  <span class="price-bar-label">Menu :</span>
+  <!-- ══ MENU ASSIGNMENT ═════════════════════════════════════════
+       ?menu=1 → Menu 1 (ex: Alger Centre, Draria, Kouba...)
+       ?menu=2 → Menu 2 (ex: Oran, Mostaganem, Chlef...)
+       ?menu=3 → Menu 3 (ex: Khemis Miliana, Djelfa, Constantine...)
+       Modifiez le lien de chaque restaurant vers la bonne version.
+  ═══════════════════════════════════════════════════════════════ -->
+  <button class="p-tab active" data-menu="1">Menu 1</button>
+  <button class="p-tab" data-menu="2">Menu 2</button>
+  <button class="p-tab" data-menu="3">Menu 3</button>
+</div><section class="dishes-wrap"><div class="dishes-grid"><div class="dish-card reveal">
+  <div class="dish-3d" data-glb="https://pub-935f0b68533740d186c56d006b31520e.r2.dev/pizza%20viande%20hache%CC%81es.glb">
+    <div class="btn-layer">
+      <div class="cube-icon"><svg viewBox="0 0 40 40" fill="none"><path d="M20 4L36 12V28L20 36L4 28V12L20 4Z" stroke="#E31E24" stroke-width="1.2"/><path d="M20 4V36M4 12L20 20L36 12" stroke="#E31E24" stroke-width="0.8" stroke-dasharray="2 2"/></svg></div>
+      <button class="voir-btn" onclick="loadDishViewer(this)"><span class="vb-t">Voir mon plat</span><span class="vb-i"><i class="fas fa-cube"></i></span></button>
+    </div>
+    <model-viewer src="" alt="Pizza Viande Hach&eacute;es" auto-rotate camera-controls ar min-camera-orbit="auto 15deg auto" max-camera-orbit="auto 88deg auto" camera-orbit="0deg 68deg 2m" shadow-intensity="1.2" exposure="1.1"></model-viewer>
+  </div>
+  <div class="dish-info">
+    <div class="dish-name">Pizza Viande Hach&eacute;es</div>
+    <div class="dish-desc">Sauce tomate, cheddar, viande hach&eacute;es</div>
+    <div class="dish-prices price-set" data-menu="1" style="display:flex"><div class="price-tag"><span class="price-size">Mini</span><span class="price-val">600 DA</span></div><div class="price-tag"><span class="price-size">Normal</span><span class="price-val">800 DA</span></div><div class="price-tag"><span class="price-size">Mega</span><span class="price-val">2600 DA</span></div></div><div class="dish-prices price-set" data-menu="2" style="display:none"><div class="price-tag"><span class="price-size">Mini</span><span class="price-val">600 DA</span></div><div class="price-tag"><span class="price-size">Normal</span><span class="price-val">900 DA</span></div><div class="price-tag"><span class="price-size">Mega</span><span class="price-val">2800 DA</span></div></div><div class="dish-prices price-set" data-menu="3" style="display:none"><div class="price-tag"><span class="price-size">Mini</span><span class="price-val">450 DA</span></div><div class="price-tag"><span class="price-size">Normal</span><span class="price-val">650 DA</span></div><div class="price-tag"><span class="price-size">Mega</span><span class="price-val">2200 DA</span></div></div>
+  </div>
+</div><div class="dish-card reveal">
+  <div class="dish-3d" data-glb="https://pub-935f0b68533740d186c56d006b31520e.r2.dev/pizza%20poulet.glb">
+    <div class="btn-layer">
+      <div class="cube-icon"><svg viewBox="0 0 40 40" fill="none"><path d="M20 4L36 12V28L20 36L4 28V12L20 4Z" stroke="#E31E24" stroke-width="1.2"/><path d="M20 4V36M4 12L20 20L36 12" stroke="#E31E24" stroke-width="0.8" stroke-dasharray="2 2"/></svg></div>
+      <button class="voir-btn" onclick="loadDishViewer(this)"><span class="vb-t">Voir mon plat</span><span class="vb-i"><i class="fas fa-cube"></i></span></button>
+    </div>
+    <model-viewer src="" alt="Pizza Poulet" auto-rotate camera-controls ar min-camera-orbit="auto 15deg auto" max-camera-orbit="auto 88deg auto" camera-orbit="0deg 68deg 2m" shadow-intensity="1.2" exposure="1.1"></model-viewer>
+  </div>
+  <div class="dish-info">
+    <div class="dish-name">Pizza Poulet</div>
+    <div class="dish-desc">Sauce tomate, cheddar, poulet</div>
+    <div class="dish-prices price-set" data-menu="1" style="display:flex"><div class="price-tag"><span class="price-size">Mini</span><span class="price-val">600 DA</span></div><div class="price-tag"><span class="price-size">Normal</span><span class="price-val">800 DA</span></div><div class="price-tag"><span class="price-size">Mega</span><span class="price-val">2800 DA</span></div></div><div class="dish-prices price-set" data-menu="2" style="display:none"><div class="price-tag"><span class="price-size">Mini</span><span class="price-val">600 DA</span></div><div class="price-tag"><span class="price-size">Normal</span><span class="price-val">900 DA</span></div><div class="price-tag"><span class="price-size">Mega</span><span class="price-val">2800 DA</span></div></div><div class="dish-prices price-set" data-menu="3" style="display:none"><div class="price-tag"><span class="price-size">Mini</span><span class="price-val">500 DA</span></div><div class="price-tag"><span class="price-size">Normal</span><span class="price-val">700 DA</span></div><div class="price-tag"><span class="price-size">Mega</span><span class="price-val">2400 DA</span></div></div>
+  </div>
+</div><div class="dish-card reveal">
+  <div class="dish-3d" data-glb="https://pub-935f0b68533740d186c56d006b31520e.r2.dev/pizza%20alge%CC%81roise.glb">
+    <div class="btn-layer">
+      <div class="cube-icon"><svg viewBox="0 0 40 40" fill="none"><path d="M20 4L36 12V28L20 36L4 28V12L20 4Z" stroke="#E31E24" stroke-width="1.2"/><path d="M20 4V36M4 12L20 20L36 12" stroke="#E31E24" stroke-width="0.8" stroke-dasharray="2 2"/></svg></div>
+      <button class="voir-btn" onclick="loadDishViewer(this)"><span class="vb-t">Voir mon plat</span><span class="vb-i"><i class="fas fa-cube"></i></span></button>
+    </div>
+    <model-viewer src="" alt="Pizza Alg&eacute;roise" auto-rotate camera-controls ar min-camera-orbit="auto 15deg auto" max-camera-orbit="auto 88deg auto" camera-orbit="0deg 68deg 2m" shadow-intensity="1.2" exposure="1.1"></model-viewer>
+  </div>
+  <div class="dish-info">
+    <div class="dish-name">Pizza Alg&eacute;roise</div>
+    <div class="dish-desc">Sauce tomate, cheddar, viande hach&eacute;es, poulet, poivron, herbes de Provence</div>
+    <div class="dish-prices price-set" data-menu="1" style="display:flex"><div class="price-tag"><span class="price-size">Mini</span><span class="price-val">600 DA</span></div><div class="price-tag"><span class="price-size">Normal</span><span class="price-val">900 DA</span></div><div class="price-tag"><span class="price-size">Mega</span><span class="price-val">3200 DA</span></div></div><div class="dish-prices price-set" data-menu="2" style="display:none"><div class="price-tag"><span class="price-size">Mini</span><span class="price-val">650 DA</span></div><div class="price-tag"><span class="price-size">Normal</span><span class="price-val">1100 DA</span></div><div class="price-tag"><span class="price-size">Mega</span><span class="price-val">3400 DA</span></div></div><div class="dish-prices price-set" data-menu="3" style="display:none"><div class="price-tag"><span class="price-size">Mini</span><span class="price-val">600 DA</span></div><div class="price-tag"><span class="price-size">Normal</span><span class="price-val">900 DA</span></div><div class="price-tag"><span class="price-size">Mega</span><span class="price-val">3000 DA</span></div></div>
+  </div>
+</div><div class="dish-card reveal">
+  <div class="dish-3d" data-glb="https://pub-935f0b68533740d186c56d006b31520e.r2.dev/pizza%20shawarma.glb">
+    <div class="btn-layer">
+      <div class="cube-icon"><svg viewBox="0 0 40 40" fill="none"><path d="M20 4L36 12V28L20 36L4 28V12L20 4Z" stroke="#E31E24" stroke-width="1.2"/><path d="M20 4V36M4 12L20 20L36 12" stroke="#E31E24" stroke-width="0.8" stroke-dasharray="2 2"/></svg></div>
+      <button class="voir-btn" onclick="loadDishViewer(this)"><span class="vb-t">Voir mon plat</span><span class="vb-i"><i class="fas fa-cube"></i></span></button>
+    </div>
+    <model-viewer src="" alt="Pizza Chawerma" auto-rotate camera-controls ar min-camera-orbit="auto 15deg auto" max-camera-orbit="auto 88deg auto" camera-orbit="0deg 68deg 2m" shadow-intensity="1.2" exposure="1.1"></model-viewer>
+  </div>
+  <div class="dish-info">
+    <div class="dish-name">Pizza Chawerma</div>
+    <div class="dish-desc">Sauce tomate, cheddar, chawerma</div>
+    <div class="dish-prices price-set" data-menu="1" style="display:flex"><div class="price-tag"><span class="price-size">Mini</span><span class="price-val">600 DA</span></div><div class="price-tag"><span class="price-size">Normal</span><span class="price-val">900 DA</span></div><div class="price-tag"><span class="price-size">Mega</span><span class="price-val">2800 DA</span></div></div><div class="dish-prices price-set" data-menu="2" style="display:none"><div class="price-tag"><span class="price-size">Mini</span><span class="price-val">600 DA</span></div><div class="price-tag"><span class="price-size">Normal</span><span class="price-val">900 DA</span></div><div class="price-tag"><span class="price-size">Mega</span><span class="price-val">2800 DA</span></div></div><div class="dish-prices price-set" data-menu="3" style="display:none"><div class="price-tag"><span class="price-size">Mini</span><span class="price-val">500 DA</span></div><div class="price-tag"><span class="price-size">Normal</span><span class="price-val">700 DA</span></div><div class="price-tag"><span class="price-size">Mega</span><span class="price-val">2400 DA</span></div></div>
+  </div>
+</div><div class="dish-card reveal">
+  <div class="dish-3d" data-glb="https://pub-935f0b68533740d186c56d006b31520e.r2.dev/pizza%20poulet%20fume%CC%81.glb">
+    <div class="btn-layer">
+      <div class="cube-icon"><svg viewBox="0 0 40 40" fill="none"><path d="M20 4L36 12V28L20 36L4 28V12L20 4Z" stroke="#E31E24" stroke-width="1.2"/><path d="M20 4V36M4 12L20 20L36 12" stroke="#E31E24" stroke-width="0.8" stroke-dasharray="2 2"/></svg></div>
+      <button class="voir-btn" onclick="loadDishViewer(this)"><span class="vb-t">Voir mon plat</span><span class="vb-i"><i class="fas fa-cube"></i></span></button>
+    </div>
+    <model-viewer src="" alt="Pizza Poulet Fum&eacute;" auto-rotate camera-controls ar min-camera-orbit="auto 15deg auto" max-camera-orbit="auto 88deg auto" camera-orbit="0deg 68deg 2m" shadow-intensity="1.2" exposure="1.1"></model-viewer>
+  </div>
+  <div class="dish-info">
+    <div class="dish-name">Pizza Poulet Fum&eacute;</div>
+    <div class="dish-desc">Sauce tomate, cheddar, poulet fum&eacute;</div>
+    <div class="dish-prices price-set" data-menu="1" style="display:flex"><div class="price-tag"><span class="price-size">Mini</span><span class="price-val">600 DA</span></div><div class="price-tag"><span class="price-size">Normal</span><span class="price-val">800 DA</span></div><div class="price-tag"><span class="price-size">Mega</span><span class="price-val">2800 DA</span></div></div><div class="dish-prices price-set" data-menu="2" style="display:none"><div class="price-tag"><span class="price-size">Mini</span><span class="price-val">600 DA</span></div><div class="price-tag"><span class="price-size">Normal</span><span class="price-val">900 DA</span></div><div class="price-tag"><span class="price-size">Mega</span><span class="price-val">2800 DA</span></div></div><div class="dish-prices price-set" data-menu="3" style="display:none"><div class="price-tag"><span class="price-size">Mini</span><span class="price-val">500 DA</span></div><div class="price-tag"><span class="price-size">Normal</span><span class="price-val">700 DA</span></div><div class="price-tag"><span class="price-size">Mega</span><span class="price-val">2400 DA</span></div></div>
+  </div>
+</div><div class="dish-card reveal">
+  <div class="dish-3d" data-glb="https://pub-935f0b68533740d186c56d006b31520e.r2.dev/pizza%203%20fromages.glb">
+    <div class="btn-layer">
+      <div class="cube-icon"><svg viewBox="0 0 40 40" fill="none"><path d="M20 4L36 12V28L20 36L4 28V12L20 4Z" stroke="#E31E24" stroke-width="1.2"/><path d="M20 4V36M4 12L20 20L36 12" stroke="#E31E24" stroke-width="0.8" stroke-dasharray="2 2"/></svg></div>
+      <button class="voir-btn" onclick="loadDishViewer(this)"><span class="vb-t">Voir mon plat</span><span class="vb-i"><i class="fas fa-cube"></i></span></button>
+    </div>
+    <model-viewer src="" alt="Pizza 3 Fromages" auto-rotate camera-controls ar min-camera-orbit="auto 15deg auto" max-camera-orbit="auto 88deg auto" camera-orbit="0deg 68deg 2m" shadow-intensity="1.2" exposure="1.1"></model-viewer>
+  </div>
+  <div class="dish-info">
+    <div class="dish-name">Pizza 3 Fromages</div>
+    <div class="dish-desc">Sauce tomate, cheddar, camembert, fromage chef</div>
+    <div class="dish-prices price-set" data-menu="1" style="display:flex"><div class="price-tag"><span class="price-size">Mini</span><span class="price-val">600 DA</span></div><div class="price-tag"><span class="price-size">Normal</span><span class="price-val">850 DA</span></div><div class="price-tag"><span class="price-size">Mega</span><span class="price-val">2800 DA</span></div></div><div class="dish-prices price-set" data-menu="2" style="display:none"><div class="price-tag"><span class="price-size">Mini</span><span class="price-val">600 DA</span></div><div class="price-tag"><span class="price-size">Normal</span><span class="price-val">900 DA</span></div><div class="price-tag"><span class="price-size">Mega</span><span class="price-val">2800 DA</span></div></div><div class="dish-prices price-set" data-menu="3" style="display:none"><div class="price-tag"><span class="price-size">Mini</span><span class="price-val">450 DA</span></div><div class="price-tag"><span class="price-size">Normal</span><span class="price-val">700 DA</span></div><div class="price-tag"><span class="price-size">Mega</span><span class="price-val">2200 DA</span></div></div>
+  </div>
+</div><div class="dish-card reveal">
+  <div class="dish-3d" data-glb="https://pub-935f0b68533740d186c56d006b31520e.r2.dev/pizza%20peperoni.glb">
+    <div class="btn-layer">
+      <div class="cube-icon"><svg viewBox="0 0 40 40" fill="none"><path d="M20 4L36 12V28L20 36L4 28V12L20 4Z" stroke="#E31E24" stroke-width="1.2"/><path d="M20 4V36M4 12L20 20L36 12" stroke="#E31E24" stroke-width="0.8" stroke-dasharray="2 2"/></svg></div>
+      <button class="voir-btn" onclick="loadDishViewer(this)"><span class="vb-t">Voir mon plat</span><span class="vb-i"><i class="fas fa-cube"></i></span></button>
+    </div>
+    <model-viewer src="" alt="Pizza Pepperoni" auto-rotate camera-controls ar min-camera-orbit="auto 15deg auto" max-camera-orbit="auto 88deg auto" camera-orbit="0deg 68deg 2m" shadow-intensity="1.2" exposure="1.1"></model-viewer>
+  </div>
+  <div class="dish-info">
+    <div class="dish-name">Pizza Pepperoni</div>
+    <div class="dish-desc">Sauce tomate, cheddar, pepperoni</div>
+    <div class="dish-prices price-set" data-menu="1" style="display:flex"><div class="price-tag"><span class="price-size">Mini</span><span class="price-val">600 DA</span></div><div class="price-tag"><span class="price-size">Normal</span><span class="price-val">800 DA</span></div><div class="price-tag"><span class="price-size">Mega</span><span class="price-val">2800 DA</span></div></div><div class="dish-prices price-set" data-menu="2" style="display:none"><div class="price-tag"><span class="price-size">Mini</span><span class="price-val">600 DA</span></div><div class="price-tag"><span class="price-size">Normal</span><span class="price-val">900 DA</span></div><div class="price-tag"><span class="price-size">Mega</span><span class="price-val">2800 DA</span></div></div><div class="dish-prices price-set" data-menu="3" style="display:none"><div class="price-tag"><span class="price-size">Mini</span><span class="price-val">450 DA</span></div><div class="price-tag"><span class="price-size">Normal</span><span class="price-val">650 DA</span></div><div class="price-tag"><span class="price-size">Mega</span><span class="price-val">2200 DA</span></div></div>
+  </div>
+</div><div class="dish-card reveal">
+  <div class="dish-3d" data-glb="https://pub-935f0b68533740d186c56d006b31520e.r2.dev/pizza%20thon.glb">
+    <div class="btn-layer">
+      <div class="cube-icon"><svg viewBox="0 0 40 40" fill="none"><path d="M20 4L36 12V28L20 36L4 28V12L20 4Z" stroke="#E31E24" stroke-width="1.2"/><path d="M20 4V36M4 12L20 20L36 12" stroke="#E31E24" stroke-width="0.8" stroke-dasharray="2 2"/></svg></div>
+      <button class="voir-btn" onclick="loadDishViewer(this)"><span class="vb-t">Voir mon plat</span><span class="vb-i"><i class="fas fa-cube"></i></span></button>
+    </div>
+    <model-viewer src="" alt="Pizza Thon" auto-rotate camera-controls ar min-camera-orbit="auto 15deg auto" max-camera-orbit="auto 88deg auto" camera-orbit="0deg 68deg 2m" shadow-intensity="1.2" exposure="1.1"></model-viewer>
+  </div>
+  <div class="dish-info">
+    <div class="dish-name">Pizza Thon</div>
+    <div class="dish-desc">Sauce tomate, cheddar, thon</div>
+    <div class="dish-prices price-set" data-menu="1" style="display:flex"><div class="price-tag"><span class="price-size">Mini</span><span class="price-val">600 DA</span></div><div class="price-tag"><span class="price-size">Normal</span><span class="price-val">900 DA</span></div><div class="price-tag"><span class="price-size">Mega</span><span class="price-val">2800 DA</span></div></div><div class="dish-prices price-set" data-menu="2" style="display:none"><div class="price-tag"><span class="price-size">Mini</span><span class="price-val">600 DA</span></div><div class="price-tag"><span class="price-size">Normal</span><span class="price-val">900 DA</span></div><div class="price-tag"><span class="price-size">Mega</span><span class="price-val">3000 DA</span></div></div><div class="dish-prices price-set" data-menu="3" style="display:none"><div class="price-tag"><span class="price-size">Mini</span><span class="price-val">500 DA</span></div><div class="price-tag"><span class="price-size">Normal</span><span class="price-val">700 DA</span></div><div class="price-tag"><span class="price-size">Mega</span><span class="price-val">2400 DA</span></div></div>
+  </div>
+</div><div class="dish-card reveal">
+  <div class="dish-3d" data-glb="https://pub-935f0b68533740d186c56d006b31520e.r2.dev/pizza%20hiver.glb">
+    <div class="btn-layer">
+      <div class="cube-icon"><svg viewBox="0 0 40 40" fill="none"><path d="M20 4L36 12V28L20 36L4 28V12L20 4Z" stroke="#E31E24" stroke-width="1.2"/><path d="M20 4V36M4 12L20 20L36 12" stroke="#E31E24" stroke-width="0.8" stroke-dasharray="2 2"/></svg></div>
+      <button class="voir-btn" onclick="loadDishViewer(this)"><span class="vb-t">Voir mon plat</span><span class="vb-i"><i class="fas fa-cube"></i></span></button>
+    </div>
+    <model-viewer src="" alt="Pizza Hiver" auto-rotate camera-controls ar min-camera-orbit="auto 15deg auto" max-camera-orbit="auto 88deg auto" camera-orbit="0deg 68deg 2m" shadow-intensity="1.2" exposure="1.1"></model-viewer>
+  </div>
+  <div class="dish-info">
+    <div class="dish-name">Pizza Hiver</div>
+    <div class="dish-desc">Sauce tomate, cheddar, viande hach&eacute;es, chawerma, olive verte &eacute;pic&eacute;es et grillées</div>
+    <div class="dish-prices price-set" data-menu="1" style="display:flex"><div class="price-tag"><span class="price-size">Mini</span><span class="price-val">900 DA</span></div><div class="price-tag"><span class="price-size">Normal</span><span class="price-val">1100 DA</span></div><div class="price-tag"><span class="price-size">Mega</span><span class="price-val">3600 DA</span></div></div><div class="dish-prices price-set" data-menu="2" style="display:none"><div class="price-tag"><span class="price-size">Mini</span><span class="price-val">900 DA</span></div><div class="price-tag"><span class="price-size">Normal</span><span class="price-val">1100 DA</span></div><div class="price-tag"><span class="price-size">Mega</span><span class="price-val">3600 DA</span></div></div><div class="dish-prices price-set" data-menu="3" style="display:none"><div class="price-tag"><span class="price-size">Mini</span><span class="price-val">600 DA</span></div><div class="price-tag"><span class="price-size">Normal</span><span class="price-val">900 DA</span></div><div class="price-tag"><span class="price-size">Mega</span><span class="price-val">3000 DA</span></div></div>
+  </div>
+</div><div class="dish-card reveal">
+  <div class="dish-3d" data-glb="https://pub-935f0b68533740d186c56d006b31520e.r2.dev/pizza%20savannah.glb">
+    <div class="btn-layer">
+      <div class="cube-icon"><svg viewBox="0 0 40 40" fill="none"><path d="M20 4L36 12V28L20 36L4 28V12L20 4Z" stroke="#E31E24" stroke-width="1.2"/><path d="M20 4V36M4 12L20 20L36 12" stroke="#E31E24" stroke-width="0.8" stroke-dasharray="2 2"/></svg></div>
+      <button class="voir-btn" onclick="loadDishViewer(this)"><span class="vb-t">Voir mon plat</span><span class="vb-i"><i class="fas fa-cube"></i></span></button>
+    </div>
+    <model-viewer src="" alt="Pizza Savannah" auto-rotate camera-controls ar min-camera-orbit="auto 15deg auto" max-camera-orbit="auto 88deg auto" camera-orbit="0deg 68deg 2m" shadow-intensity="1.2" exposure="1.1"></model-viewer>
+  </div>
+  <div class="dish-info">
+    <div class="dish-name">Pizza Savannah</div>
+    <div class="dish-desc">Sauce tomate, cheddar, chawerma, viande hach&eacute;e, pepperoni, poulet fum&eacute;, poulet</div>
+    <div class="dish-prices price-set" data-menu="1" style="display:flex"><div class="price-tag"><span class="price-size">Mini</span><span class="price-val">900 DA</span></div><div class="price-tag"><span class="price-size">Normal</span><span class="price-val">1100 DA</span></div><div class="price-tag"><span class="price-size">Mega</span><span class="price-val">4000 DA</span></div></div><div class="dish-prices price-set" data-menu="2" style="display:none"><div class="price-tag"><span class="price-size">Mini</span><span class="price-val">900 DA</span></div><div class="price-tag"><span class="price-size">Normal</span><span class="price-val">1100 DA</span></div><div class="price-tag"><span class="price-size">Mega</span><span class="price-val">4000 DA</span></div></div><div class="dish-prices price-set" data-menu="3" style="display:none"><div class="price-tag"><span class="price-size">Mini</span><span class="price-val">650 DA</span></div><div class="price-tag"><span class="price-size">Normal</span><span class="price-val">900 DA</span></div><div class="price-tag"><span class="price-size">Mega</span><span class="price-val">3500 DA</span></div></div>
+  </div>
+</div><div class="dish-card reveal">
+  <div class="dish-3d" data-glb="https://pub-935f0b68533740d186c56d006b31520e.r2.dev/pizzwich.glb">
+    <div class="btn-layer">
+      <div class="cube-icon"><svg viewBox="0 0 40 40" fill="none"><path d="M20 4L36 12V28L20 36L4 28V12L20 4Z" stroke="#E31E24" stroke-width="1.2"/><path d="M20 4V36M4 12L20 20L36 12" stroke="#E31E24" stroke-width="0.8" stroke-dasharray="2 2"/></svg></div>
+      <button class="voir-btn" onclick="loadDishViewer(this)"><span class="vb-t">Voir mon plat</span><span class="vb-i"><i class="fas fa-cube"></i></span></button>
+    </div>
+    <model-viewer src="" alt="Pizzwich" auto-rotate camera-controls ar min-camera-orbit="auto 15deg auto" max-camera-orbit="auto 88deg auto" camera-orbit="0deg 68deg 2m" shadow-intensity="1.2" exposure="1.1"></model-viewer>
+  </div>
+  <div class="dish-info">
+    <div class="dish-name">Pizzwich</div>
+    <div class="dish-desc">Au choix&nbsp;: poulet, chawerma, 3 fromages, thon, poulet fum&eacute;</div>
+    <div class="dish-prices price-set" data-menu="1" style="display:flex"><div class="price-tag"><span class="price-size">Mini</span><span class="price-val">600 DA</span></div><div class="price-tag"><span class="price-size">Normal</span><span class="price-val">800 DA</span></div></div><div class="dish-prices price-set" data-menu="2" style="display:none"><div class="price-tag"><span class="price-size">Mini</span><span class="price-val">600 DA</span></div><div class="price-tag"><span class="price-size">Normal</span><span class="price-val">800 DA</span></div></div><div class="dish-prices price-set" data-menu="3" style="display:none"><div class="price-tag"><span class="price-size">Mini</span><span class="price-val">450 DA</span></div><div class="price-tag"><span class="price-size">Normal</span><span class="price-val">650 DA</span></div></div>
+  </div>
+</div></div></section><footer>
+  <div class="ft-grid">
+    <div>
+      <div class="ft-logo"><svg viewBox="0 0 200 165" xmlns="http://www.w3.org/2000/svg" class="savannah-logo sm">
+  <circle cx="100" cy="82" r="75" fill="none" stroke="#E31E24" stroke-width="2.5"/>
+  <path id="ta2" d="M 37 70 A 66 66 0 0 1 163 70" fill="none"/>
+  <text font-family="Dancing Script,cursive" font-size="17" font-style="italic" fill="#E31E24" font-weight="700"><textPath href="#ta2" startOffset="25%">Best</textPath></text>
+  <path id="ba2" d="M 44 95 A 64 64 0 0 0 156 95" fill="none"/>
+  <text font-family="Dancing Script,cursive" font-size="17" font-style="italic" fill="#E31E24" font-weight="700"><textPath href="#ba2" startOffset="22%">Pizza</textPath></text>
+  <text x="100" y="90" text-anchor="middle" font-family="Great Vibes,cursive" font-size="42" fill="white">Savannah</text>
+  <path d="M 22 97 Q 100 105 178 94" fill="none" stroke="white" stroke-width="2" stroke-linecap="round"/>
+</svg></div>
+      <div class="ft-tagline">Best Pizza in Algeria</div>
+      <p class="ft-sub">16 restaurants &agrave; travers l&rsquo;Alg&eacute;rie</p>
+      <div class="ft-soc">
+        <a href="https://www.instagram.com/savannahpizzeria/" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.tiktok.com/@savannahpizzeria" target="_blank"><i class="fab fa-tiktok"></i></a>
+        <a href="https://facebook.com/SAVANNAHPIZZERIA" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://x.com/savannahpizza" target="_blank"><i class="fab fa-x-twitter"></i></a>
+        <a href="https://www.snapchat.com/@savannahpizzeri" target="_blank"><i class="fab fa-snapchat"></i></a>
+        <a href="mailto:savannahpizzeria@gmail.com"><i class="fas fa-envelope"></i></a>
+      </div>
+    </div>
+    <div>
+      <div class="ft-hd">Restaurants</div>
+      <ul class="ft-links">
+        <li><a href="didouche.html">Didouche Mourad</a></li>
+        <li><a href="draria.html">Draria</a></li>
+        <li><a href="kouba.html">Kouba</a></li>
+        <li><a href="mostaganem.html">Mostaganem</a></li>
+        <li><a href="oran-akid.html">Oran &mdash; Akid Lotfi</a></li>
+        <li><a href="constantine.html">Constantine</a></li>
+        <li><a href="khemis.html">Khemis Miliana</a></li>
+      </ul>
+    </div>
+    <div class="ft-contact">
+      <div class="ft-hd">Contact</div>
+      <p>savannahpizzeria@gmail.com</p>
+      <div class="ft-hd" style="margin-top:1.5rem">Menu</div>
+      <ul class="ft-links">
+        <li><a href="menu.html">Voir la Carte</a></li>
+        <li><a href="pizza-tomate.html">Pizza Sauce Tomate</a></li>
+        <li><a href="pizza-blanche.html">Pizza Sauce Blanche</a></li>
+        <li><a href="burger.html">Burgers</a></li>
+        <li><a href="tacos.html">Tacos</a></li>
+        <li><a href="panozzo.html">Panozzo</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="ft-bottom">
+    <p class="ft-copy">&copy; 2025 <span>Savannah Pizzeria</span></p>
+    <p class="ft-copy">R&eacute;alis&eacute; avec <span>&hearts;</span></p>
+  </div>
+</footer><script src="script.js"></script></body></html>
