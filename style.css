@@ -588,7 +588,7 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;back
   content:'';
   position:absolute;
   inset:0;
-  z-index:2;
+  z-index:1;
   pointer-events:none;
   border-radius:50%;
   /* Red glow for circles + Best + Pizza (outer ring area) */
@@ -607,7 +607,7 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;back
   position:absolute;
   /* Center band — "Savannah" text zone, white/cyan glow */
   top:28%;left:8%;right:8%;bottom:28%;
-  z-index:2;
+  z-index:1;
   pointer-events:none;
   background:
     radial-gradient(ellipse 90% 60% at 50% 50%, rgba(200,245,255,.55) 0%, rgba(180,235,255,.3) 40%, transparent 75%);
@@ -638,8 +638,8 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;back
 
 /* Sizes per context */
 .logo-led-wrap.nav-size   img{height:48px;width:48px;border-radius:50%;object-fit:cover}
-.logo-led-wrap.hero-size  img{width:min(280px,72vw);height:min(280px,72vw);border-radius:50%;object-fit:cover}
-.logo-led-wrap.intro-size img{width:min(280px,78vw);height:min(280px,78vw);border-radius:50%;object-fit:cover}
+.logo-led-wrap.hero-size  img{width:min(280px,72vw);height:auto;position:relative;z-index:3;display:block}
+.logo-led-wrap.intro-size img{width:min(280px,78vw);height:auto;position:relative;z-index:3;display:block}
 .logo-led-wrap.ft-size    img{height:52px;width:52px;border-radius:50%;object-fit:cover}
 .logo-led-wrap.resto-size img{height:60px;width:60px;border-radius:50%;object-fit:cover}
 
