@@ -637,11 +637,11 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;back
 }
 
 /* Sizes per context */
-.logo-led-wrap.nav-size   img{height:48px;width:auto}
-.logo-led-wrap.hero-size  img{width:min(280px,72vw);height:auto}
-.logo-led-wrap.intro-size img{width:min(280px,78vw);height:auto}
-.logo-led-wrap.ft-size    img{height:52px;width:auto}
-.logo-led-wrap.resto-size img{height:60px;width:auto}
+.logo-led-wrap.nav-size   img{height:48px;width:48px;border-radius:50%;object-fit:cover}
+.logo-led-wrap.hero-size  img{width:min(280px,72vw);height:min(280px,72vw);border-radius:50%;object-fit:cover}
+.logo-led-wrap.intro-size img{width:min(280px,78vw);height:min(280px,78vw);border-radius:50%;object-fit:cover}
+.logo-led-wrap.ft-size    img{height:52px;width:52px;border-radius:50%;object-fit:cover}
+.logo-led-wrap.resto-size img{height:60px;width:60px;border-radius:50%;object-fit:cover}
 
 /* Nav hover */
 .nav-logo:hover .logo-led-wrap::before,
