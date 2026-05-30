@@ -16,26 +16,6 @@
   <button class="intro-skip">Passer &rarr;</button>
 </div>
 
-<script>
-// Safety net — intro always closes after 6s
-setTimeout(function(){
-  var ov=document.getElementById('intro-overlay');
-  if(ov && !ov.classList.contains('hidden')){
-    var lw=document.querySelector('.intro-logo-wrap');
-    if(lw)lw.classList.add('visible');
-    ov.classList.add('hidden');
-    setTimeout(function(){ov.style.display='none';},900);
-  }
-},6000);
-// Skip on any tap/click/key
-document.getElementById('intro-overlay').addEventListener('click',function(){
-  var lw=document.querySelector('.intro-logo-wrap');
-  if(lw)lw.classList.add('visible');
-  this.classList.add('hidden');
-  setTimeout(function(){document.getElementById('intro-overlay').style.display='none';},900);
-});
-</script>
-
 <nav>
   <a href="index.html" class="nav-logo"><div class="logo-led-wrap nav-size"><img src="savannahlogo.png" alt="Savannah Pizzeria" style="height:48px;width:auto;object-fit:contain;display:block;filter:drop-shadow(0 0 8px rgba(227,30,36,.3));transition:filter .3s,transform .3s"></div></a>
   <ul class="nav-links">
