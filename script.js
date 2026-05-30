@@ -204,7 +204,19 @@ function initCursor(){
 
 /* ── Init ────────────────────────────────────────────── */
 document.addEventListener('DOMContentLoaded',()=>{
-  if(document.getElementById('intro-overlay'))runIntro();
+  const introOverlay=document.getElementById('intro-overlay');
+  if(introOverlay){
+    runIntro();
+    // Hard fallback — force-remove after 7s no matter what
+    setTimeout(()=>{
+      if(introOverlay && !introOverlay.classList.contains('hidden')){
+        const logoWrap=document.querySelector('.intro-logo-wrap');
+        if(logoWrap)logoWrap.classList.add('visible');
+        introOverlay.classList.add('hidden');
+        setTimeout(()=>introOverlay.style.display='none',800);
+      }
+    },7000);
+  }
   initNav();initReveal();initCounters();initPriceTabs();initTilt();initCursor();
   initParticles('particles');initParticles('rparticles');
   document.querySelectorAll('.media-slot video').forEach(v=>v.addEventListener('click',()=>v.paused?v.play():v.pause()));
