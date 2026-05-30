@@ -10,11 +10,30 @@
 <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Montserrat:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 </head><body>
 <!-- INTRO -->
-<div id="intro-overlay">
+<div id="intro-overlay" style="transition:opacity .8s ease,visibility .8s ease">
   <canvas id="intro-canvas"></canvas>
-  <div class="intro-logo-wrap"><div class="logo-led-wrap intro-size"><img src="savannahlogo.png" alt="Savannah Pizzeria" style="width:min(280px,78vw);height:auto;display:block;margin:0 auto;filter:drop-shadow(0 0 30px rgba(227,30,36,.5)) drop-shadow(0 0 60px rgba(255,60,60,.3))"></div></div>
-  <button class="intro-skip">Passer &rarr;</button>
+  <div class="intro-logo-wrap">
+    <div class="logo-led-wrap intro-size">
+      <img src="savannahlogo.png" alt="Savannah Pizzeria"
+        style="width:min(260px,72vw);height:auto;display:block;margin:0 auto;
+               filter:drop-shadow(0 0 30px rgba(227,30,36,.6)) drop-shadow(0 0 60px rgba(255,60,60,.35))">
+    </div>
+  </div>
+  <button class="intro-skip" onclick="document.getElementById('intro-overlay').classList.add('hidden')">Passer &rarr;</button>
 </div>
+
+<script>
+// Hard fallback — intro always closes after 5s no matter what
+setTimeout(function(){
+  var ov=document.getElementById('intro-overlay');
+  if(ov && !ov.classList.contains('hidden')){
+    var lw=document.querySelector('.intro-logo-wrap');
+    if(lw)lw.classList.add('visible');
+    ov.classList.add('hidden');
+    setTimeout(function(){ov.style.display='none';},900);
+  }
+},5000);
+</script>
 
 <nav>
   <a href="index.html" class="nav-logo"><div class="logo-led-wrap nav-size"><img src="savannahlogo.png" alt="Savannah Pizzeria" style="height:48px;width:auto;object-fit:contain;display:block;filter:drop-shadow(0 0 8px rgba(227,30,36,.3));transition:filter .3s,transform .3s"></div></a>
