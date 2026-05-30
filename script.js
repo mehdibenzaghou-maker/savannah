@@ -9,15 +9,13 @@ function distKm(la1,lo1,la2,lo2){
   return R*2*Math.atan2(Math.sqrt(a),Math.sqrt(1-a));
 }
 function menuForCoords(lat,lon){
-  // Menu 2 = Oran, Constantine, Mostaganem (expensive)
-  if(distKm(lat,lon,35.697,-0.633)<130)return'2';
-  if(distKm(lat,lon,35.931,0.089)<90)return'2';
-  if(distKm(lat,lon,36.365,6.615)<110)return'2';
-  if(lon>6.5&&lat>35)return'2';
-  // Menu 1 = Algiers metro (medium)
+  // Menu 2 = Oran & Mostaganem only
+  if(distKm(lat,lon,35.697,-0.633)<130)return'2'; // Oran
+  if(distKm(lat,lon,35.931,0.089)<90)return'2';   // Mostaganem
+  // Menu 1 = Algiers metro
   if(distKm(lat,lon,36.737,3.086)<60)return'1';
   if(distKm(lat,lon,36.737,3.086)<90&&lat>36.4)return'1';
-  // Menu 3 = Interior (cheapest)
+  // Menu 3 = Constantine + interior (everything else)
   return'3';
 }
 
@@ -25,7 +23,7 @@ async function initPriceTabs(){
   const tabs=document.querySelectorAll('.p-tab');
   if(!tabs.length)return;
 
-  const LABELS={'1':'Alger & région','2':'Oran · Constantine · Mostaganem','3':'Intérieur du pays'};
+  const LABELS={'1':'Menu 1 (Didouche · Draria · Kouba · Birkhadem · Chéraga · Staouali · Blida)','2':'Menu 2 (Oran · Oran Trait d'Union · Mostaganem)','3':'Menu 3 (Constantine · Khemis Miliana · Khemis Express · Aïn Defla · Djelfa · Chlef)'};
 
   function activate(m,save){
     if(save!==false)sessionStorage.setItem('sv_menu',m);
