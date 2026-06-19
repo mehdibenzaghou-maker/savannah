@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#0A0A0A">
+<title>Burgers &mdash; Savannah Pizzeria</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Montserrat:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.js"></script>
+</head><body><nav>
+  <a href="index.html" class="nav-logo"><div class="logo-led-wrap nav-size"><img src="savannahlogo.png" alt="Savannah Pizzeria" style="height:48px;width:auto;object-fit:contain;display:block;filter:drop-shadow(0 0 8px rgba(227,30,36,.3));transition:filter .3s,transform .3s"></div></a>
+  <ul class="nav-links">
+    <li><a href="index.html">Accueil</a></li>
+    <li class="nav-dd"><a href="#">Restaurants <span class="caret">&#9662;</span></a>
+      <ul class="dd-menu">
+        <li><a href="didouche.html">Didouche Mourad</a></li><li><a href="draria.html">Draria</a></li>
+        <li><a href="kouba.html">Kouba</a></li><li><a href="mostaganem.html">Mostaganem</a></li>
+        <li><a href="birkhadem.html">Birkhadem</a></li><li><a href="oran-akid.html">Oran &mdash; Akid Lotfi</a></li>
+        <li><a href="blida.html">Blida</a></li><li><a href="constantine.html">Constantine</a></li>
+        <li><a href="cheraga.html">Ch&eacute;raga</a></li><li><a href="chlef.html">Chlef</a></li>
+        <li><a href="oran-trait.html">Oran &mdash; Trait d&rsquo;Union</a></li><li><a href="aindefla.html">A&iuml;n Defla</a></li>
+        <li><a href="djelfa.html">Djelfa</a></li><li><a href="staouali.html">Sta&ouml;uali</a></li>
+        <li><a href="khemis.html">Khemis Miliana</a></li><li><a href="khemis-express.html">Khemis Express</a></li>
+      </ul>
+    </li>
+    <li><a href="menu.html">Menu</a></li>
+  </ul>
+  <div class="hamburger" id="burger"><span></span><span></span><span></span></div>
+</nav>
+<div class="mob-nav" id="mobNav">
+  <a href="index.html">Accueil</a>
+  <div class="mob-sec-label">&mdash; Restaurants &mdash;</div>
+  <a href="didouche.html">Didouche Mourad</a><a href="draria.html">Draria</a>
+  <a href="kouba.html">Kouba</a><a href="mostaganem.html">Mostaganem</a>
+  <a href="birkhadem.html">Birkhadem</a><a href="oran-akid.html">Oran &mdash; Akid Lotfi</a>
+  <a href="blida.html">Blida</a><a href="constantine.html">Constantine</a>
+  <a href="cheraga.html">Ch&eacute;raga</a><a href="chlef.html">Chlef</a>
+  <a href="oran-trait.html">Oran &mdash; Trait d&rsquo;Union</a><a href="aindefla.html">A&iuml;n Defla</a>
+  <a href="djelfa.html">Djelfa</a><a href="staouali.html">Sta&ouml;uali</a>
+  <a href="khemis.html">Khemis Miliana</a><a href="khemis-express.html">Khemis Express</a>
+  <a href="menu.html">Menu</a>
+</div><div class="menu-hero">
+  <p class="mh-label">Nos Sp&eacute;cialit&eacute;s</p>
+  <h1 class="mh-title">Burgers</h1>
+  <div class="mh-orn"><div class="mh-gem"></div></div>
+  <a href="menu.html" class="back-link">&#8592; Retour au Menu</a>
+</div><div class="section-switcher">
+  <a href="pizza-tomate.html" class="ss-btn"><div class="ss-icon"><i class="fas fa-pizza-slice"></i></div><span class="ss-label">Pizza Tomate</span></a>
+  <a href="pizza-blanche.html" class="ss-btn"><div class="ss-icon"><i class="fas fa-cheese"></i></div><span class="ss-label">Pizza Blanche</span></a>
+  <a href="burger.html" class="ss-btn active"><div class="ss-icon"><i class="fas fa-burger"></i></div><span class="ss-label">Burgers</span></a>
+  <a href="tacos.html" class="ss-btn"><div class="ss-icon"><i class="fas fa-bread-slice"></i></div><span class="ss-label">Tacos</span></a>
+  <a href="panozzo.html" class="ss-btn"><div class="ss-icon"><i class="fas fa-hotdog"></i></div><span class="ss-label">Panozzo</span></a>
+</div>
+<div class="geo-banner" id="geo-banner" style="display:none">
+  <span class="geo-banner-ico"><i class="fas fa-location-dot"></i></span>
+  <span class="geo-banner-txt">Tarifs d&eacute;tect&eacute;s pour&nbsp;: <strong class="geo-region">votre r&eacute;gion</strong></span>
+</div><div class="region-selector" id="region-selector" style="display:none">
+  <p>Choisissez votre r&eacute;gion pour voir les tarifs correspondants</p>
+  <div class="region-btns">
+    <button class="region-btn" data-menu="1">Menu 1 — Didouche · Draria · Kouba · Birkhadem · Chéraga · Staouali</button>
+    <button class="region-btn" data-menu="2">Menu 2 — Oran · Oran Trait d'Union · Mostaganem</button>
+    <button class="region-btn" data-menu="3">Menu 3 — Constantine · Khemis Miliana · Khemis Express · Aïn Defla · Djelfa · Chlef</button>
+    <button class="region-btn" data-menu="4">Menu 4 — Blida</button>
+  </div>
+</div><div class="price-bar">
+  <span class="price-bar-label">Tarifs&nbsp;:</span>
+  <button class="p-tab active" data-menu="1">Menu 1 (Didouche · Draria · Kouba · Birkhadem · Chéraga · Staouali)</button>
+  <button class="p-tab" data-menu="2">Menu 2 (Oran · Oran Trait d'Union · Mostaganem)</button>
+  <button class="p-tab" data-menu="3">Menu 3 (Constantine · Khemis Miliana · Khemis Express · Aïn Defla · Djelfa · Chlef)</button>
+  <button class="p-tab" data-menu="4">Menu 4 (Blida)</button>
+</div><section class="dishes-wrap"><div class="dishes-grid"><div class="dish-card reveal">
+  <div class="dish-3d" data-glb="https://pub-935f0b68533740d186c56d006b31520e.r2.dev/classique%20burger.glb">
+    <div class="btn-layer">
+      <div class="cube-icon"><svg viewBox="0 0 40 40" fill="none"><path d="M20 4L36 12V28L20 36L4 28V12L20 4Z" stroke="#E31E24" stroke-width="1.2"/><path d="M20 4V36M4 12L20 20L36 12" stroke="#E31E24" stroke-width="0.8" stroke-dasharray="2 2"/></svg></div>
+      <button class="voir-btn" onclick="loadDishViewer(this)"><span class="vb-t">Voir mon plat</span><span class="vb-i"><i class="fas fa-cube"></i></span></button>
+    </div>
+    <model-viewer src="" alt="Classic" auto-rotate camera-controls ar min-camera-orbit="auto 15deg auto" max-camera-orbit="auto 88deg auto" camera-orbit="0deg 68deg 2m" shadow-intensity="0.55" exposure="0.72"></model-viewer>
+  </div>
+  <div class="dish-info">
+    <div class="dish-name">Classic</div>
+    <div class="dish-desc">Salade, tomate, viande hach&eacute;e, cheddar, sauce maison</div>
+    <div class="price-single price-set" data-menu="1" style="display:block">450 DA</div><div class="price-single price-set" data-menu="2" style="display:none">450 DA</div><div class="price-single price-set" data-menu="3" style="display:none">350 DA</div><div class="price-single price-set" data-menu="4" style="display:none">350 DA</div>
+  </div>
+</div><div class="dish-card reveal">
+  <div class="dish-3d" data-glb="https://pub-935f0b68533740d186c56d006b31520e.r2.dev/chicken%20burger.glb">
+    <div class="btn-layer">
+      <div class="cube-icon"><svg viewBox="0 0 40 40" fill="none"><path d="M20 4L36 12V28L20 36L4 28V12L20 4Z" stroke="#E31E24" stroke-width="1.2"/><path d="M20 4V36M4 12L20 20L36 12" stroke="#E31E24" stroke-width="0.8" stroke-dasharray="2 2"/></svg></div>
+      <button class="voir-btn" onclick="loadDishViewer(this)"><span class="vb-t">Voir mon plat</span><span class="vb-i"><i class="fas fa-cube"></i></span></button>
+    </div>
+    <model-viewer src="" alt="Chicken" auto-rotate camera-controls ar min-camera-orbit="auto 15deg auto" max-camera-orbit="auto 88deg auto" camera-orbit="0deg 68deg 2m" shadow-intensity="0.55" exposure="0.72"></model-viewer>
+  </div>
+  <div class="dish-info">
+    <div class="dish-name">Chicken</div>
+    <div class="dish-desc">Salade, tomate, tranche de poulet, cheddar, sauce maison</div>
+    <div class="price-single price-set" data-menu="1" style="display:block">450 DA</div><div class="price-single price-set" data-menu="2" style="display:none">450 DA</div><div class="price-single price-set" data-menu="3" style="display:none">350 DA</div><div class="price-single price-set" data-menu="4" style="display:none">350 DA</div>
+  </div>
+</div><div class="dish-card reveal">
+  <div class="dish-3d" data-glb="https://pub-935f0b68533740d186c56d006b31520e.r2.dev/barbecue%20burger.glb">
+    <div class="btn-layer">
+      <div class="cube-icon"><svg viewBox="0 0 40 40" fill="none"><path d="M20 4L36 12V28L20 36L4 28V12L20 4Z" stroke="#E31E24" stroke-width="1.2"/><path d="M20 4V36M4 12L20 20L36 12" stroke="#E31E24" stroke-width="0.8" stroke-dasharray="2 2"/></svg></div>
+      <button class="voir-btn" onclick="loadDishViewer(this)"><span class="vb-t">Voir mon plat</span><span class="vb-i"><i class="fas fa-cube"></i></span></button>
+    </div>
+    <model-viewer src="" alt="Barbecue" auto-rotate camera-controls ar min-camera-orbit="auto 15deg auto" max-camera-orbit="auto 88deg auto" camera-orbit="0deg 68deg 2m" shadow-intensity="0.55" exposure="0.72"></model-viewer>
+  </div>
+  <div class="dish-info">
+    <div class="dish-name">Barbecue</div>
+    <div class="dish-desc">Salade, tomate, viande hach&eacute;e, fromage fondu, sauce barbecue, cheddar</div>
+    <div class="price-single price-set" data-menu="1" style="display:block">450 DA</div><div class="price-single price-set" data-menu="2" style="display:none">450 DA</div><div class="price-single price-set" data-menu="3" style="display:none">400 DA</div><div class="price-single price-set" data-menu="4" style="display:none">450 DA</div>
+  </div>
+</div><div class="dish-card reveal">
+  <div class="dish-3d" data-glb="https://pub-935f0b68533740d186c56d006b31520e.r2.dev/dz%20burgerr.glb">
+    <div class="btn-layer">
+      <div class="cube-icon"><svg viewBox="0 0 40 40" fill="none"><path d="M20 4L36 12V28L20 36L4 28V12L20 4Z" stroke="#E31E24" stroke-width="1.2"/><path d="M20 4V36M4 12L20 20L36 12" stroke="#E31E24" stroke-width="0.8" stroke-dasharray="2 2"/></svg></div>
+      <button class="voir-btn" onclick="loadDishViewer(this)"><span class="vb-t">Voir mon plat</span><span class="vb-i"><i class="fas fa-cube"></i></span></button>
+    </div>
+    <model-viewer src="" alt="DZ Burger" auto-rotate camera-controls ar min-camera-orbit="auto 15deg auto" max-camera-orbit="auto 88deg auto" camera-orbit="0deg 68deg 2m" shadow-intensity="0.55" exposure="0.72"></model-viewer>
+  </div>
+  <div class="dish-info">
+    <div class="dish-name">DZ Burger</div>
+    <div class="dish-desc">Salade, tomate, viande hach&eacute;e, cheddar, fromage fondu, ketchup, mayonnaise</div>
+    <div class="price-single price-set" data-menu="1" style="display:block">450 DA</div><div class="price-single price-set" data-menu="2" style="display:none">450 DA</div><div class="price-single price-set" data-menu="3" style="display:none">400 DA</div><div class="price-single price-set" data-menu="4" style="display:none">450 DA</div>
+  </div>
+</div><div class="dish-card reveal">
+  <div class="dish-3d" data-glb="https://pub-935f0b68533740d186c56d006b31520e.r2.dev/aladin.glb">
+    <div class="btn-layer">
+      <div class="cube-icon"><svg viewBox="0 0 40 40" fill="none"><path d="M20 4L36 12V28L20 36L4 28V12L20 4Z" stroke="#E31E24" stroke-width="1.2"/><path d="M20 4V36M4 12L20 20L36 12" stroke="#E31E24" stroke-width="0.8" stroke-dasharray="2 2"/></svg></div>
+      <button class="voir-btn" onclick="loadDishViewer(this)"><span class="vb-t">Voir mon plat</span><span class="vb-i"><i class="fas fa-cube"></i></span></button>
+    </div>
+    <model-viewer src="" alt="Aladdin" auto-rotate camera-controls ar min-camera-orbit="auto 15deg auto" max-camera-orbit="auto 88deg auto" camera-orbit="0deg 68deg 2m" shadow-intensity="0.55" exposure="0.72"></model-viewer>
+  </div>
+  <div class="dish-info">
+    <div class="dish-name">Aladdin</div>
+    <div class="dish-desc">Salade, tomate, viande hach&eacute;e, &oelig;uf, gruy&egrave;re, sauce maison</div>
+    <div class="price-single price-set" data-menu="1" style="display:block">500 DA</div><div class="price-single price-set" data-menu="2" style="display:none">500 DA</div><div class="price-single price-set" data-menu="3" style="display:none">400 DA</div><div class="price-single price-set" data-menu="4" style="display:none">450 DA</div>
+  </div>
+</div><div class="dish-card reveal">
+  <div class="dish-3d" data-glb="https://pub-935f0b68533740d186c56d006b31520e.r2.dev/whooper%202.glb">
+    <div class="btn-layer">
+      <div class="cube-icon"><svg viewBox="0 0 40 40" fill="none"><path d="M20 4L36 12V28L20 36L4 28V12L20 4Z" stroke="#E31E24" stroke-width="1.2"/><path d="M20 4V36M4 12L20 20L36 12" stroke="#E31E24" stroke-width="0.8" stroke-dasharray="2 2"/></svg></div>
+      <button class="voir-btn" onclick="loadDishViewer(this)"><span class="vb-t">Voir mon plat</span><span class="vb-i"><i class="fas fa-cube"></i></span></button>
+    </div>
+    <model-viewer src="" alt="Whooper" auto-rotate camera-controls ar min-camera-orbit="auto 15deg auto" max-camera-orbit="auto 88deg auto" camera-orbit="0deg 68deg 2m" shadow-intensity="0.55" exposure="0.72"></model-viewer>
+  </div>
+  <div class="dish-info">
+    <div class="dish-name">Whooper</div>
+    <div class="dish-desc">Salade, tomate, oignon, viande hach&eacute;e, camembert, cheddar, sauce maison</div>
+    <div class="price-single price-set" data-menu="1" style="display:block">500 DA</div><div class="price-single price-set" data-menu="2" style="display:none">500 DA</div><div class="price-single price-set" data-menu="3" style="display:none">400 DA</div><div class="price-single price-set" data-menu="4" style="display:none">450 DA</div>
+  </div>
+</div><div class="dish-card reveal">
+  <div class="dish-3d" data-glb="https://pub-935f0b68533740d186c56d006b31520e.r2.dev/big%20whooper.glb">
+    <div class="btn-layer">
+      <div class="cube-icon"><svg viewBox="0 0 40 40" fill="none"><path d="M20 4L36 12V28L20 36L4 28V12L20 4Z" stroke="#E31E24" stroke-width="1.2"/><path d="M20 4V36M4 12L20 20L36 12" stroke="#E31E24" stroke-width="0.8" stroke-dasharray="2 2"/></svg></div>
+      <button class="voir-btn" onclick="loadDishViewer(this)"><span class="vb-t">Voir mon plat</span><span class="vb-i"><i class="fas fa-cube"></i></span></button>
+    </div>
+    <model-viewer src="" alt="Big Whooper" auto-rotate camera-controls ar min-camera-orbit="auto 15deg auto" max-camera-orbit="auto 88deg auto" camera-orbit="0deg 68deg 2m" shadow-intensity="0.55" exposure="0.72"></model-viewer>
+  </div>
+  <div class="dish-info">
+    <div class="dish-name">Big Whooper</div>
+    <div class="dish-desc">Salade, tomate, oignon, 150g viande hach&eacute;e, camembert, cheddar, gruy&egrave;re, sauce maison</div>
+    <div class="price-single price-set" data-menu="1" style="display:block">750 DA</div><div class="price-single price-set" data-menu="2" style="display:none">800 DA</div><div class="price-single price-set" data-menu="3" style="display:none">600 DA</div><div class="price-single price-set" data-menu="4" style="display:none">600 DA</div>
+  </div>
+</div><div class="dish-card reveal">
+  <div class="dish-3d" data-glb="https://pub-935f0b68533740d186c56d006b31520e.r2.dev/algerian%20burger.glb">
+    <div class="btn-layer">
+      <div class="cube-icon"><svg viewBox="0 0 40 40" fill="none"><path d="M20 4L36 12V28L20 36L4 28V12L20 4Z" stroke="#E31E24" stroke-width="1.2"/><path d="M20 4V36M4 12L20 20L36 12" stroke="#E31E24" stroke-width="0.8" stroke-dasharray="2 2"/></svg></div>
+      <button class="voir-btn" onclick="loadDishViewer(this)"><span class="vb-t">Voir mon plat</span><span class="vb-i"><i class="fas fa-cube"></i></span></button>
+    </div>
+    <model-viewer src="" alt="Burger Alg&eacute;rien" auto-rotate camera-controls ar min-camera-orbit="auto 15deg auto" max-camera-orbit="auto 88deg auto" camera-orbit="0deg 68deg 2m" shadow-intensity="0.55" exposure="0.72"></model-viewer>
+  </div>
+  <div class="dish-info">
+    <div class="dish-name">Burger Alg&eacute;rien</div>
+    <div class="dish-desc">Salade, tomate, viande hach&eacute;e, &oelig;uf, frite, fromage fondu, sauce maison</div>
+    <div class="price-single price-set" data-menu="1" style="display:block">500 DA</div><div class="price-single price-set" data-menu="2" style="display:none">700 DA</div><div class="price-single price-set" data-menu="3" style="display:none">600 DA</div><div class="price-single price-set" data-menu="4" style="display:none">500 DA</div>
+  </div>
+</div></div></section><footer>
+  <div class="ft-grid">
+    <div>
+      <div class="ft-logo"><div class="logo-led-wrap ft-size"><img src="savannahlogo.png" alt="Savannah Pizzeria" style="height:52px;width:auto;object-fit:contain;display:block;filter:drop-shadow(0 0 6px rgba(227,30,36,.25))"></div></div>
+      <div class="ft-tagline">Best Pizza in Algeria</div>
+      <p class="ft-sub">16 restaurants &agrave; travers l&rsquo;Alg&eacute;rie</p>
+      <div class="ft-soc">
+        <a href="https://www.instagram.com/savannahpizzeria/" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.tiktok.com/@savannahpizzeria" target="_blank"><i class="fab fa-tiktok"></i></a>
+        <a href="https://facebook.com/SAVANNAHPIZZERIA" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://x.com/savannahpizza" target="_blank"><i class="fab fa-x-twitter"></i></a>
+        <a href="https://www.snapchat.com/@savannahpizzeri" target="_blank"><i class="fab fa-snapchat"></i></a>
+        <a href="mailto:savannahpizzeria@gmail.com"><i class="fas fa-envelope"></i></a>
+      </div>
+    </div>
+    <div>
+      <div class="ft-hd">Restaurants</div>
+      <ul class="ft-links">
+        <li><a href="khemis.html">Khemis Miliana</a></li><li><a href="didouche.html">Didouche Mourad</a></li>
+        <li><a href="draria.html">Draria</a></li><li><a href="constantine.html">Constantine</a></li>
+        <li><a href="oran-akid.html">Oran &mdash; Akid Lotfi</a></li><li><a href="mostaganem.html">Mostaganem</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="ft-hd">Menu</div>
+      <ul class="ft-links">
+        <li><a href="menu.html">Voir la Carte</a></li>
+        <li><a href="pizza-tomate.html">Pizza Sauce Tomate</a></li>
+        <li><a href="pizza-blanche.html">Pizza Sauce Blanche</a></li>
+        <li><a href="burger.html">Burgers</a></li>
+        <li><a href="tacos.html">Tacos</a></li>
+        <li><a href="panozzo.html">Panozzo</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="ft-bottom">
+    <p class="ft-copy">&copy; 2025 <span>Savannah Pizzeria</span> &mdash; Best Pizza in Algeria</p>
+    <p class="ft-copy">R&eacute;alis&eacute; avec <span>&hearts;</span></p>
+  </div>
+</footer><script src='script.js'></script></body></html>
